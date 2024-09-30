@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --dawn-pink : #F2EAE2;
+    --deep-aquamarine : #3D8168;
+    --pure-white : #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--dawn-pink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 600px;
+    background-color: var(--pure-white);
+    display: flex;
+    border-radius: 8px;
+}
+
+.display {
+    font-family: Playfair Display;
+}
+
+.montserrat {
+    font-family: Montserrat;
+}
+
+.text-wrapper, .img-wrapper {
+    width: 50%;
+}
+
+.img-wrapper {
+    background: url(../img/Bitmap.png) no-repeat;
+    background-size: cover;
+    border-radius: 8px 0px 0px 8px;
+}
+
+
+.text-wrapper {
+    padding: 32px;
+}
+
+.name-product {
+    font-weight: 700;
+}
+
+.description-product {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.new-price-product {
+    color: var(--deep-aquamarine);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.price-product {
+    text-decoration: line-through;
+}
+
+.add-card {
+    background-color: var(--deep-aquamarine);
+    color: var(--pure-white);
+    padding: 16px 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.add-card:hover {
+    background-color: #1A4032;
+}
+
+.add-card p {
+    font-weight: 700;   
+}
+
+@media (max-width: 600px){
+    main {
+        flex-direction: column;
+        width: 95%;
+    }
+    .text-wrapper, .img-wrapper {
+        width: 100%;
+    }
+
+    .img-wrapper {
+        height: 340px;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+}
